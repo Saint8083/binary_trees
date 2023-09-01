@@ -2,9 +2,10 @@
 
 /**
  * heap_insert - inserts a value in Max Binary Heap
- * @root: double pointer to the root node of the Heap to insert the value
- * @value: The value to store in the node to be inserted
- * Return: Pointer to the created node
+ * @root: a double pointer to the root node of the Heap to insert the value
+ * @value: the value to store in the node to be inserted
+ *
+ * Return: a pointer to the created node
  *         NULL on failure
  */
 heap_t *heap_insert(heap_t **root, int value)
@@ -46,6 +47,7 @@ heap_t *heap_insert(heap_t **root, int value)
 		flip->parent->n = tmp;
 		new = new->parent;
 	}
+	/* Flip values with parent until parent value exceeds new value */
 
 	return (new);
 }
@@ -53,6 +55,7 @@ heap_t *heap_insert(heap_t **root, int value)
 /**
  * binary_tree_size - measures the size of a binary tree
  * @tree: tree to measure the size of
+ *
  * Return: size of the tree
  *         0 if tree is NULL
  */
