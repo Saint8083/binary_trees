@@ -3,6 +3,7 @@
 /**
  * binary_tree_is_avl - finds if a binary tree is an avl
  * @tree: pointer to the root node of the tree
+ *
  * Return: 1 if tree is avl
  *         0 otherwise
  */
@@ -19,6 +20,7 @@ int binary_tree_is_avl(const binary_tree_t *tree)
  * @tree: pointer to the root node of the tree
  * @min: minimum value
  * @max: maximum value
+ *
  * Return: 1 if tree is avl
  *         0 otherwise
  */
@@ -39,11 +41,13 @@ int btia_helper(const binary_tree_t *tree, int min, int max)
 
 	return (btia_helper(tree->left, min, tree->n - 1) &&
 		btia_helper(tree->right, tree->n + 1, max));
+	/* This is part of the BST check logic */
 }
 
 /**
  * binary_tree_height - measures the height of a binary tree
  * @tree: tree to measure the height of
+ *
  * Return: height of the tree
  *         0 if tree is NULL
  */
